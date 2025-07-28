@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  scale:1.2;
+  overflow: hidden;
+}
+
+.center-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.pfp-wrapper {
+  position: relative;
+}
+
+.splash-bg {
+  position: absolute;
+  top: -26%;
+  left: -200%;
+  width: 1500px;
+  height: 606px;
+  z-index: -1;
+  pointer-events: visibleFill;
+  overflow: clip;
+  opacity: 50%;
+}
+
+.inner-center-content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  width: 100%;
+}
+
+.pfp {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 5px solid lightgreen;
+}
+
+.intro-text {
+  color: orangered;
+  text-transform: uppercase;
+  font-family: "Lucida Console", monospace;
+  font-size: medium;
+}
+
+.socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform .2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+
+.circle-nav {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+
+.nav-item {
+  position: absolute;
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background: #e0ffe0;
+  scale: 1.1 1.1;
+}
+
+/* Position each item around the circle */
+.about      { top: -5%;    left: 36%;}
+.education  { top: 25%;   left: 90%;}
+.experience { top: 75%;   left: 85%;}
+.projects   { top: 75%;   left: -10%;}
+.skills     { top: 25%;   left: -10%;}
+
+
