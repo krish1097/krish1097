@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 100px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial;
+  text-align: center;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 90%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 10px 30px;
+  font-size: 16px;
+  border: none;
+  background: lightgreen;
+  border-radius: 8px;
+  cursor: pointer;
+}

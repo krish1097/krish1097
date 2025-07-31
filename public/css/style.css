@@ -107,10 +107,10 @@ body {
 }
 
 /* Position each item around the circle */
-.about      { top: -5%;    left: 36%;}
-.education  { top: 25%;   left: 90%;}
-.experience { top: 75%;   left: 85%;}
-.projects   { top: 75%;   left: -10%;}
-.skills     { top: 25%;   left: -10%;}
+.about      {top: -5%;   left: 36%;}
+.experience {top: 25%;   left: 90%;}
+.projects   {top: 25%;   left: -15%;}
+.contactMe  {top: 75%;   left: 80%;}
+.viewResume {top: 75%;   left: -15%;}
 
 
