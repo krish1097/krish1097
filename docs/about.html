@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+  <link rel="stylesheet" href="css/aboutme.css">
+</head>
+<body>
+  <a class = "return" href="/">
+    <button class="button" type="button">
+      <i class="arrow left"></i>
+      Home
+    </button>
+  </a>
+
+  <section id="about" class="aboutMe">
+    <h1>About Me</h1>
+    <div class = "rectangle" ></div>
+    <div class ="intro">
+      <p class ="intro-text">
+        Hi my name is Krish. I grew up in Burlington Township,
+        New Jersey. My passion for computer science began
+        in middle school when my computer class teacher
+        introduced us to code.org. From there on I would often
+        try and familiarize myself with coding and trying to program
+        the little games from code.org. In high school I joined the
+        FIRST robotics team, where I quickly became a core member of the 
+        team as a programmer. I programmed the robot's autonomous movements
+        as well as key functions such as moving, shooting balls, and climbing.
+        I found my work on the team to be very fun and decided to pursue 
+        computer science as a major. After several projects and internships, I 
+        have gained a lot of experience in this field. I am thankful to my mentors 
+        that have guided me to where I am but even more so cannot wait to see where my future takes me. 
+      </p>
+      <div class="introImage">add self image here</div>
+    </div>
+    <div class="moveButton">
+      <button id="scrollBtn" class="scroll-down" aria-label="Continue for more">
+          Continue for more 
+          <br></br>
+          <span class="chevron">⌄</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="Interests" class="Interests">
+    <div class="container">
+      <h2>Interests</h2>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scrolling on click
+    const scrollBtn = document.getElementById("scrollBtn");
+    const more = document.getElementById("Interests");
+    const about = document.getElementById("about");
+
+    scrollBtn.addEventListener("click", () => {
+      more.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    // Hide the arrow once the user scrolls past the About section.
+    // Use IntersectionObserver so the Home button is never affected.
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        // When less than 30% of #about is visible, hide the button
+        if (entry.intersectionRatio < 0.9) {
+          scrollBtn.classList.add("hidden");
+        } else {
+          scrollBtn.classList.remove("hidden");
+        }
+      },
+      { threshold: [0, 0.9, 1] }
+    );
+
+    observer.observe(about);
+  </script>
+</body>
+</html>
