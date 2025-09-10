@@ -2,13 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: #f3f3f3;
-  scale:1.2;
   overflow: hidden;
+  background-image: url('/images/bluebg.jpg') ;
 }
 
 .center-container {
-  position: relative;
+  scale:1.2;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -18,25 +17,10 @@ body {
 
 .profile-circle {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
 }
 .pfp-wrapper {
   position: relative;
-}
-
-.splash-bg {
-  position: absolute;
-  top: -26%;
-  left: -200%;
-  width: 1500px;
-  height: 606px;
-  z-index: -1;
-  pointer-events: visibleFill;
-  overflow: clip;
-  opacity: 50%;
 }
 
 .inner-center-content {
@@ -52,7 +36,7 @@ body {
   height: 300px;
   border-radius: 100%;
   object-fit: cover;
-  border: 5px solid lightgreen;
+  border: 5px solid orangered;
 }
 
 .intro-text {
@@ -104,7 +88,7 @@ body {
 }
 
 .nav-item:hover {
-  background: #e0ffe0;
+  background: orangered;
   scale: 1.1 1.1;
 }
 

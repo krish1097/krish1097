@@ -33,14 +33,14 @@
       </p>
       <div class="introImage">add self image here</div>
     </div>
-    <div class="moveButton">
-      <button id="scrollBtn" class="scroll-down" aria-label="Continue for more">
-          Continue for more 
-          <br></br>
-          <span class="chevron">⌄</span>
-      </button>
-    </div>
   </section>
+
+  <div class="moveArea">
+    <div id="scrollBtn" class="scroll-down" aria-label="Continue for more">
+      <p class="contiue">CONTINUE</p>
+      <div class = "triangle-down"></div>
+    </div>
+  </div>
 
   <section id="Interests" class="Interests">
     <div class="container">
@@ -58,12 +58,10 @@
       more.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
-    // Hide the arrow once the user scrolls past the About section.
-    // Use IntersectionObserver so the Home button is never affected.
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
-        // When less than 30% of #about is visible, hide the button
+        // When less than 90% of #about is visible, hide the button
         if (entry.intersectionRatio < 0.9) {
           scrollBtn.classList.add("hidden");
         } else {

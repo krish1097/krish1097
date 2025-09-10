@@ -1,6 +1,6 @@
 html{scroll-behavior: auto;}
 body {
-  margin: 25px;
+  margin: 0px;
   padding: 0px;
   font-family: Arial, sans-serif;
   background: #f3f3f3;
@@ -8,9 +8,11 @@ body {
 
 /*return button */
 .return{
+  margin: 25px;
   box-shadow: 0 10px 10px rgba(0,0,0,0.1);
   position: sticky;
   top: 16px;
+  
 }
 .button{
   border-radius: 50px;
@@ -20,6 +22,7 @@ body {
 .button:hover{
   background-color: lightgreen;
   scale:1.1;
+  cursor: pointer;
 }
 .arrow {
   border: solid black;
@@ -34,6 +37,7 @@ body {
 
 /*about me section */
 .aboutMe{
+  margin: 25px;
   padding: 35px 90px;
 }
 .rectangle{
@@ -69,36 +73,38 @@ body {
   flex-wrap: wrap;
 }
 
-.moveButton{
-  display: flex;
-  justify-content: center;
+.moveArea{
+  margin-top: 100px;
+  padding-bottom: 50px;
+  font-weight: 500;
+  font-size: x-large;
+  background: #f3f3f3;
+  background-image:  linear-gradient(rgba(0,0,0,.1) 40%,#f3f3f3);
+  
 }
 .scroll-down{
-  justify-content: center;
-  position: sticky;            /* sits at the bottom of viewport while in about section */
-  bottom: 24px;
-  margin-top: 48px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border: 1px solid #d0d0d0;
-  background: #ffffff;
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 600;
-  box-shadow: 0 6px 16px rgba(0,0,0,.08);
-  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  height: auto;
+  width: 125px;
+  margin-left: 50%;
+  justify-items: center; 
+  position: sticky;
+  color: rgb(82, 219, 82);
+  transition: transform .2s ease, opacity .2s ease;
   animation: bob 1.6s infinite ease-in-out;
 }
-.scroll-down .chevron{
-  font-size: 22px; /* the ⌄ glyph */
-  line-height: 1;
+
+
+.scroll-down .triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid rgb(82, 219, 82);
   transform: translateY(-1px);
 }
 .scroll-down:hover{
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+  cursor: pointer;
 }
 .scroll-down.hidden{
   opacity: 0;
@@ -112,6 +118,7 @@ body {
 
 /* Interests & Services section */
 .Interests{
+  margin: 25px;
   background: #fff;
   border-top: 1px solid #e8e8e8;
   margin-top: 8%;
