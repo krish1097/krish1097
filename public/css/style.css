@@ -96,4 +96,65 @@ body {
 .contactMe  {top: 75%;   left: 80%;}
 .viewResume {top: 75%;   left: -15%;}
 
+/* ===== Mobile layout: stack items under the profile image ===== */
+@media (max-width: 640px) {
+  body { 
+    overflow: scroll;            /* allow scrolling on phones */
+  }
+
+  .center-container {
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    scale: 1;                  /* undo the desktop scale */
+  }
+
+  .profile-circle {
+    position: static;          /* stop absolute positioning */
+    text-align: center;
+  }
+
+  .pfp {
+    width: 55vw;               /* responsive avatar size */
+    height: 55vw;
+    max-width: 280px;
+    max-height: 280px;
+  }
+
+  .inner-center-content {
+    position: static;          /* place text under the image */
+    transform: none;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .circle-nav {
+    position: static;          /* remove circle placement */
+    width: 100%;
+    height: auto;
+    margin: 20px 0 0;
+    display: flex;             /* stack the buttons */
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .nav-item {
+    position: static;          /* override absolute positions */
+    width: min(420px, 90%);    /* nice wide tap target */
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 12px 16px;
+  }
+
+  /* Optional: slightly thinner border for small screens */
+  .pfp { border-width: 4px; }
+}
+
+
 
