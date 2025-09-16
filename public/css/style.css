@@ -97,7 +97,7 @@ body {
 .viewResume {top: 75%;   left: -15%;}
 
 /* ===== Mobile layout: stack items under the profile image ===== */
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   body { 
     overflow: scroll;            /* allow scrolling on phones */
   }
@@ -145,15 +145,19 @@ body {
   }
 
   .nav-item {
-    position: static;          /* override absolute positions */
+
+     position: static !important;  /* force override */
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
     width: min(420px, 90%);    /* nice wide tap target */
     text-align: center;
     font-size: 1.05rem;
     padding: 12px 16px;
   }
 
-  /* Optional: slightly thinner border for small screens */
-  .pfp { border-width: 4px; }
 }
 
 

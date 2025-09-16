@@ -13,7 +13,7 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'index.htm
 app.get('/about', (req, res) => res.sendFile(path.join(__dirname, 'views', 'about.html')));
 app.get('/projects', (req, res) => res.sendFile(path.join(__dirname, 'views', 'projects.html')));
 app.get('/experience', (req, res) => res.sendFile(path.join(__dirname, 'views', 'experience.html')));
-app.get('/viewResume', (req, res) => res.sendFile(path.join(__dirname, 'public', 'KrishResume.pdf')));
+app.get('/viewResume', (req, res) => res.sendFile(path.join(__dirname, 'public', 'KrishResume_.pdf')));
 app.get('/contactMe', (req, res) => res.sendFile(path.join(__dirname, 'views', 'contactMe.html')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
