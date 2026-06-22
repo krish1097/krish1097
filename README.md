@@ -1,4 +1,4 @@
-Hey Welcome to my Personal Site
+Hey Welcome to my Personal Site!!
 This is a portfolio that I am currently working on to house my projects
 so I can easily share with everyone. Theres some really cool projects that 
 I've worked on. Currently the site is still under progress, but I hope you
