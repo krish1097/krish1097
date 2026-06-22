@@ -37,12 +37,10 @@ body {
 }
 
 #typing-text::after {
-    content: " I";
     animation: blink 0.8s infinite;
 }
 
 #typing-text.done::after {
-    content: " ";
     animation: none;
 }
 
