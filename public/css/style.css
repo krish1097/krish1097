@@ -106,6 +106,9 @@ body {
 
 /*mobile intro text*/
 @media (max-width: 768px) {
+  .body{
+    overflow: scroll;
+  }
   .hero {
       flex-direction: column;
       text-align: center;
