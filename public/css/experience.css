@@ -38,6 +38,9 @@ body {
 
 /*Experience Page*/
 
+.jobs section{
+  margin-bottom: 5vh;
+}
 .title{
     margin-top: 7vh;
     overflow: wrap;
@@ -51,14 +54,66 @@ body {
   background-color: lightgreen;
 }
 
+.section{
+  width: clamp(38vh, 90vw, 110rem);
+  height: auto;
+  border: 1px solid lightgreen;
+  border-radius: 10px;
+  box-shadow: 0 0 1vh 1vh rgba(0,0,0,0.1);
+}
+
+.header{
+  display: inline-block;
+  margin-left: 3%;
+  padding-top: 1%;
+}
+.jobName{
+  color: orangered;
+}
+.title2{
+  color: grey;
+  font-size: medium;
+  font-family:'Times New Roman', Times, serif ;
+}
+
+.discription{
+  justify-content: center;
+  text-align: justify;
+  margin-top:-.5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-weight:bold;
+}
+
 /*mobile*/
 
 @media (max-width: 768px) {
-    .title{
-        margin-top: 7vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .body{
+    margin-left: 0%;
+  }
+  .section{
+    margin-top: 1vh;
+    margin-left: 2vw;
+  }
+  .title{
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rectangle{
+    padding-left: 0%;
+    width: 38vh;
+  }
+  .section{
+    justify-content: center;
+  }
+
+  .title2{
+    font-size: smaller;
+  }
+
+
 }
 
