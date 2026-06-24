@@ -116,5 +116,9 @@ body {
     max-width: 20vh;
     height: auto;
   }
+  .intro-text{
+    font-size: medium;
+    padding-right: 2%;
+  }
 }
 
