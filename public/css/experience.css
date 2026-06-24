@@ -1,0 +1,64 @@
+body {
+  margin: 0px;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #f3f3f3;
+  margin-left: 5%;
+}
+
+/*return button */
+.return{
+  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 5%;
+  
+}
+.button{
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: lightgreen;
+  scale:1.1;
+  cursor: pointer;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+/*Experience Page*/
+
+.title{
+    margin-top: 7vh;
+    overflow: wrap;
+}
+
+.rectangle{
+  width: clamp(1rem,38vh,73rem);
+  height:1vh;
+  padding-left: 1%;
+  margin-bottom: 1%;
+  background-color: lightgreen;
+}
+
+/*mobile*/
+
+@media (max-width: 768px) {
+    .title{
+        margin-top: 7vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
