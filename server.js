@@ -102,8 +102,9 @@ app.post('/send', (req, res) => {
   });
 
   const mailOptions = {
-    from: email,
+    from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
+    replyTo: email,
     subject: `Portfolio Contact from ${name}`,
     text: message + `\n\nReply to: ${email}`
   };
