@@ -92,7 +92,9 @@ app.post('/send', (req, res) => {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.EMAIL_USER,  
       pass: process.env.EMAIL_PASS 
@@ -101,7 +103,7 @@ app.post('/send', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'krishpatel.1097@gmail.com',
+    to: process.env.EMAIL_USER,
     subject: `Portfolio Contact from ${name}`,
     text: message + `\n\nReply to: ${email}`
   };
