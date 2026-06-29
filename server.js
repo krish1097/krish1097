@@ -2,7 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
+const {Resend} = require('resend');
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -88,36 +89,23 @@ app.get('/contactMe', (req, res) => {
 });
 
 // Handle email POST
-app.post('/send', (req, res) => {
+app.post('/send', async (req, res) => {
   const { name, email, message } = req.body;
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    requireTLS: true,
-    auth: {
-      user: process.env.EMAIL_USER,  
-      pass: process.env.EMAIL_PASS 
-    }
-  });
+  try {
+    await resend.emails.send({
+      from: 'Portfolio Contact <onboarding@resend.dev>',
+      to: process.env.EMAIL_USER,
+      replyTo: email,
+      subject: `Portfolio Contact from ${name}`,
+      text: `${message}\n\nName: ${name}\nReply to: ${email}`
+    });
 
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,
-    replyTo: email,
-    subject: `Portfolio Contact from ${name}`,
-    text: message + `\n\nReply to: ${email}`
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error(error);
-      return sendMessagePage(res, "Failed to send message. Try again.", "/contactMe");
-    }
     return sendMessagePage(res, "Message sent successfully!", "/");
-
-  });
-  
+  } catch (error) {
+    console.error(error);
+    return sendMessagePage(res, "Failed to send message. Try again.", "/contactMe");
+  }
 });
+  
 
